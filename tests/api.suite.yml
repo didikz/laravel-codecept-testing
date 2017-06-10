@@ -1,0 +1,16 @@
+class_name: ApiTester
+modules:
+    enabled:
+        - \Helper\Api
+        - Asserts
+        - Db
+        - Laravel5:
+            environment_file: .env.testing
+        - REST:
+            depends: Laravel5
+    config:
+        - Laravel5:
+            environment_file: .env.testing
+        - Db:
+            dump: tests/_data/dump.sql
+            cleanup: true

@@ -1,0 +1,30 @@
+actor: Tester
+paths:
+    tests: tests
+    log: tests/_output
+    data: tests/_data
+    support: tests/_support
+    envs: tests/_envs
+settings:
+    bootstrap: _bootstrap.php
+    colors: true
+    memory_limit: 1024M
+extensions:
+    enabled:
+        - Codeception\Extension\RunFailed
+modules:
+    config:
+        Db:
+            dsn: 'sqlite:database/database.sqlite'
+            user: ''
+            password: ''
+            dump: tests/_data/dump.sql
+            cleanup: true
+coverage:
+    enabled: true
+    include:
+        - app/Http/*
+    exclude:
+        - app/Exceptions
+        - app/Console
+        - app/Providers
