@@ -1,4 +1,7 @@
 ## Automated API Testing Laravel Using JWT and Codeception
+
+[![Build Status](https://travis-ci.org/didikz/laravel-codecept-testing.svg?branch=master)](https://travis-ci.org/didikz/laravel-codecept-testing)
+
 Coding exercise & automated API testing Laravel using JWT and Codeception.
 ## Installation
 + Clone repo
