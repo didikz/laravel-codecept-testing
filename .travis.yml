@@ -3,6 +3,7 @@ php:
   - '5.6'
   - '7.0'
   - '7.1'
+dist: xenial
 
 before_script:
   - cp .env.testing .env
@@ -11,7 +12,6 @@ before_script:
   - composer install --no-interaction
   - php artisan key:generate
   - php artisan migrate
-  - php artisan db:seed
   - php artisan config:cache
   - php artisan optimize --force
   - composer dumpautoload --optimize
